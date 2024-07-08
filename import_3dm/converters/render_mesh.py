@@ -23,6 +23,7 @@
 import rhino3dm as r3d
 from . import utils
 import bmesh
+import bpy.app
 
 def import_render_mesh(context, ob, name, scale, options):
     # concatenate all meshes from all (brep) faces,
@@ -99,7 +100,8 @@ def import_render_mesh(context, ob, name, scale, options):
         bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=0.0001)
         bm.to_mesh(mesh)
         bm.free()
-        mesh.use_auto_smooth = True
+        if bpy.app.version < (4, 1):
+            mesh.use_auto_smooth = True
     # done, now add object to blender
 
 
