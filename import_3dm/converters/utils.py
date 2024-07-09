@@ -78,7 +78,7 @@ def get_or_create_iddata(
         base    : bpy.types.bpy_prop_collection,
         tag_dict: Dict[str, Any],
         obdata : bpy.types.ID,
-        use_none : bool
+        use_none : bool = False
     )   -> bpy.types.ID:
     """
     Get an iddata.
