@@ -104,8 +104,8 @@ def import_render_mesh(context, ob, name, scale, options):
                     elif coords:
                         # print(loop.index, loop.vertex_index, len(uvl), len(coords))
                         uvl[loop.index].uv = coords[loop.vertex_index]
-                    else:
-                        print("no tex coords")
+                    # else:
+                    #     print("no tex coords")
                 except Exception:  # TODO: narrow down error type, you lazy bastard ;)
                     print(name)
                     print(traceback.format_exc())
