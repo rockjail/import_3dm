@@ -171,7 +171,7 @@ class Import3dm(Operator, ImportHelper):
             "import_instances_grid_layout":self.import_instances_grid_layout,
             "import_instances_grid":self.import_instances_grid,
             "subD_level_viewport":self.subD_level_viewport,
-            "subD_level_render":self.subD_level_render
+            "subD_level_render":self.subD_level_render,
             "link_materials_to":self.link_materials_to,
         }
         return read_3dm(context, options)
